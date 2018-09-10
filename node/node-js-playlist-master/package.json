@@ -1,7 +1,7 @@
 {
-  "name": "js-playlist-master",
+  "name": "public",
   "version": "1.0.0",
-  "description": "CSS and asset files for the Net Ninja YouTube nodejs playlist",
+  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
     "express": "^4.16.3"
   }

@@ -1,10 +1,21 @@
-console.log('hey node');
-setTimeout(function(){
-	console.log('3 seconds have passed')
-},3000);
+var express = require('express');
+var app = express();
+var todoController = require('./controllers/todoController');
 
-var time  = 0;
-setInterval(function(){
-	time+=1;
-	console.log(time+'seconds have passed');
-},1000)
+//set up template engine
+
+app.set('view engine','ejs');
+
+//static files
+//when you visit the assets locate to specific file
+app.use(express.static('./public'));
+
+//fire controllers
+
+todoController(app);
+
+
+//listen to port
+
+app.listen(3000);
+console.log('You are listening to port 3000');
